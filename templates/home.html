@@ -1,0 +1,73 @@
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+
+<div class="container">
+    <div class="row">
+        <h2>Diabetes Prediction</h2>
+       <div class="row">
+            <div class="col-sm-8">
+            <style>
+            body {background-color: powderblue;} 
+            </style>
+            
+            <form method ="post" anctype ="multipart/form-data" action  = "prediction">
+            {% csrf_token %}   
+                <h4 class="page-header">Please enter the following:</h4>
+                <form role="form">
+                    <div class="form-group float-label-control">
+                        <label for="male">Glucose Level</label><br>   
+                        <input type="text" class="form-control" name="Glucose" required="required" />
+                            
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Insulin</label>
+                        <input type="text" name="Insulin" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Body-Mass Index</label>
+                        <input type="text" name="BMI" class="form-control" required="required" />
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label for="">Age</label>
+                        <input type="text" name="Age" class="form-control"  required="required" />
+                    </div>
+                    <div class="form-group float-label-control">
+    
+                        <input type="submit" name = "submit" value = "Predict"/>
+                    </div>
+                </form>
+                
+                
+                
+
+
+            </div>
+            
+            <div class="col-sm-4">
+            </br>
+            </br>
+            </br>
+            </br>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            More about Diabetes
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href ="https://www.who.int/health-topics/diabetes#tab=tab_1"> World Health Organization</li>
+                            <li><a href "https://en.wikipedia.org/wiki/Diabetes"> Wikipedia </li>
+                            <li><a href"https://www.healthline.com/health/diabetes"> HealthLine </li>
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
